@@ -1,0 +1,60 @@
+Job: Java Developer with AI Tooling Expertise
+
+Experience: 3 to 4 Years
+
+Location: Bangalore, Work from Office
+
+Mode: Permanent
+
+Job Summary
+
+We are seeking a talented Java Developer with 3–7 years of experience in backend development and a strong interest in leveraging AI tools and APIs to enhance product functionality, automation, and user experience. The ideal candidate will be proficient in Java technologies and have hands-on exposure to integrating AI capabilities into enterprise applications.
+
+Technical Skill Set
+
+Proficiency in Core Java, Spring Boot, JPA/Hibernate, REST APIs
+Strong understanding of OOP concepts, design patterns, and multithreading
+Experience with microservices, database integrations (MySQL), and deployment on Linux/Windows environments
+Familiarity with Spring Security, JWT, OAuth/OIDC
+Experience using Git, CI/CD tools (GitLab, Jenkins), Maven, and Docker
+Exposure to cloud platforms such as AWS or Heroku is a plus
+Understanding of Agile development practices, unit testing, and basic architecture concepts
+AI Tools Exposure
+
+Experience or familiarity with integrating external AI services such as:
+OpenAI, Azure Cognitive Services, AWS AI tools, Hugging Face APIs
+Ability to implement AI-enhanced features like summarization, auto-tagging, or pattern recognition
+Understanding of prompt engineering and working with third-party AI APIs
+Bonus: exposure to AI-assisted coding platforms or low-code AI tools
+Soft Skills
+
+Good problem-solving and analytical skills
+Strong communication and collaboration abilities
+Self-driven, eager to learn, and comfortable in a fast-paced environment
+Willingness to take ownership and contribute proactively to team success
+Qualifications
+
+Bachelor’s degree in Computer Science, Engineering, or related field
+3 to 7 years of experience in Java-based application development
+Exposure to AI tools and APIs in a development context
+Java Certification is a plus
+Job Types: Full-time, Permanent
+
+
+
+Location Type:
+
+In-person
+Schedule:
+
+Day shift
+Monday to Friday
+Application Question(s):
+
+Do you have experience with AI tools. If yes, mention the tools you have worked on?
+Experience:
+
+Java: 3 years (Required)
+Spring Boot: 3 years (Required)
+Hibernate: 3 years (Required)
+Work Location: In person

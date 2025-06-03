@@ -1,0 +1,159 @@
+# Node & Angular
+resumeit-frontend/node_modules/
+resumeit-frontend/dist/
+
+# Python
+resumeit-ai/venv/
+__pycache__/
+*.pyc
+
+# Java
+resumeit-backend/target/
+*.class
+
+# IntelliJ
+.idea/
+*.iml
+
+# OS / System
+.DS_Store
+
+# Secrets
+.env
+*.key
+*.secret
+resumeit-backend/src/main/resources/application.properties
+
+
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+# Ignore virtual environments
+venv/
+.env
+# Java and Spring Boot
+*.class
+*.log
+*.war
+*.jar
+target/
+build/
+
+# Maven
+.mvn/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+*.log
+
+# Node (for Angular frontend)
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Python and AI
+*.pyc
+*.pyo
+__pycache__/
+venv/
+*.env
+*.pkl
+*.h5
+*.pth
+*.token
+*.key
+*.json
+
+# Google API Keys or other sensitive files
+*.env
+
+# IDE files (for IntelliJ, VSCode, etc.)
+.idea/
+.vscode/
+
+# System files
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# OS-specific files (macOS, Windows, etc.)
+Thumbs.db
+ehthumbs.db
+
+# Ignore token files and API secrets
+*.pem
+*.key
+*.crt
+*.token
+*.env
+
+# Ignore IDE configs
+.idea/
+.vscode/
+
+# Ignore system files
+.DS_Store
+
+# Ignore node & Python modules
+node_modules/
+__pycache__/
+*.pyc
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+# Spring Boot
+target/
+*.log
+*.class
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Sensitive files
+src/main/resources/application.properties
+src/main/resources/application.yml
+
+# Maven
+.mvn/
+mvnw
+mvnw.cmd
+
+# macOS
+.DS_Store
+
+# Ignore all files inside uploads folder
+/uploads/*
+# But keep the folder itself by keeping this empty file
+!/uploads/.gitkeep
