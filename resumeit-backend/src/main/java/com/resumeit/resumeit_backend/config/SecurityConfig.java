@@ -23,6 +23,10 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 import java.util.Optional;
 
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.cors.CorsConfigurationSource;
+
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
@@ -46,16 +50,17 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
+                .cors(cors -> cors.configurationSource(corsConfigurationSource())) // ✅ Call method below
                 .csrf(csrf -> csrf.disable())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/auth/signup", "/api/auth/login", "/login/oauth2/code/google","/api/files/upload").permitAll()
+                        .requestMatchers("/api/auth/signup", "/api/auth/login", "/login/oauth2/code/google", "/api/files/upload").permitAll()
                         .requestMatchers("/api/auth/update-user-type").authenticated()
                         .anyRequest().authenticated()
                 )
                 .oauth2Login(oauth2 -> oauth2
                         .userInfoEndpoint(userInfo -> userInfo
-                                .oidcUserService(oidcUserService) // 👈 use OIDC service
+                                .oidcUserService(oidcUserService)
                         )
                         .successHandler((request, response, authentication) -> {
                             OidcUser oidcUser = (OidcUser) authentication.getPrincipal();
@@ -69,14 +74,13 @@ public class SecurityConfig {
                                     + "&userType=" + user.getUserType().name();
 
                             response.sendRedirect(redirectUrl);
-
                         })
                 )
-
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
     }
+
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -87,4 +91,17 @@ public class SecurityConfig {
     public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
         return config.getAuthenticationManager();
     }
+    @Bean
+    public CorsConfigurationSource corsConfigurationSource() {
+        CorsConfiguration config = new CorsConfiguration();
+        config.addAllowedOrigin("http://localhost:4200");
+        config.addAllowedHeader("*");
+        config.addAllowedMethod("*");
+        config.setAllowCredentials(true);
+
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", config);
+        return source;
+    }
+
 }

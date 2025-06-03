@@ -18,12 +18,14 @@ export class AuthService {
     return this.http.post(`${this.apiUrl}/login`, data);
   }
   logout(): Observable<any> {
-    return this.http.post('${this.apiUrl}/logout', {}, {
+    const token = localStorage.getItem('accessToken');
+    return this.http.post(`${this.apiUrl}/logout`, {}, {
       headers: {
-        Authorization: `Bearer ${localStorage.getItem('token')}`
+        Authorization: `Bearer ${token}`
       }
     });
   }
+  
   
   updateUserType(data: any): Observable<any> {
     return this.http.put(`${this.apiUrl}/update-user-type`, data);
